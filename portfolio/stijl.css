@@ -1,0 +1,356 @@
+html {
+  font-family: helvetica;
+}
+
+body.lightmode {
+  background-color: white;
+}
+
+body.darkmode {
+  background-color: #282828;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 2rem;
+  padding: 1rem 1rem .5rem 0rem;
+  text-align: right;
+}
+
+#btn-hamburger span {
+  background: firebrick;
+  width: 3rem;
+  height: 5px;
+  display: block;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+#btn-hamburger.lightmode {
+  cursor: pointer;
+  width: 88px;
+  height: 64px;
+  text-align: center;
+  padding-top: 1.5rem;
+  background-color: #DCDCDC;
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+}
+
+#btn-hamburger.darkmode {
+  cursor: pointer;
+  width: 88px;
+  height: 64px;
+  text-align: center;
+  padding-top: 1.5rem;
+  background-color: #464646;
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+}
+
+header.lightmode {
+  background-color: #DCDCDC;
+  color: black;
+  position: fixed;
+  top: 0rem;
+  right: 0rem;
+  width: calc(100% - 88px);
+}
+
+header.darkmode {
+  background-color: #464646;
+  color: white;
+  position: fixed;
+  top: 0rem;
+  right: 0rem;
+  width: calc(100% - 88px);
+}
+
+#light-dark.lightmode {
+  position: fixed;
+  top: 0rem;
+  left: 88px;
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  width: 88px;
+  height: 88px;
+  border: 0;
+  outline: 0;
+  background-color: #191919;
+  color: white;
+  cursor: pointer;
+}
+
+#light-dark.darkmode {
+  position: fixed;
+  top: 0rem;
+  left: 88px;
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  width: 88px;
+  height: 88px;
+  border: 0;
+  outline: 0;
+  background-color: #F1F1F1;
+  color: black;
+  cursor: pointer;
+}
+
+.nav-sidebar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 58px;
+  height: calc(100vh - 88px);
+  padding: 0 15px;
+  background-color: firebrick;
+  opacity: .8;
+  z-index: 1000;
+}
+
+.nav-sidebar, .nav-sidebar ul {
+    visibility: hidden;
+}
+
+.nav-sidebar ul {
+  padding-top: 15px;
+  overflow: hidden;
+}
+
+.nav-sidebar ul li {
+  line-height: 40px;
+}
+
+.nav-sidebar ul li a {
+  display: block;
+  height: 40px;
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  display: grid;
+  padding: 2rem;
+  padding-top: 7.5rem;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-areas:
+  "a a"
+  "a a"
+  "b c"
+  "b c"
+  "d d"
+  "e e"
+  "f g"
+  "f g"
+  "h h"
+  "i i"
+}
+
+.ikke {
+  background-image: url("ikke.jpg");
+  grid-area: a;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 61vh;
+}
+
+.carolina_s3 {
+  background-image: url("carolina_s3.jpg");
+  grid-area: b;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+}
+
+.carolina_s2 {
+  background-image: url("carolina_s2.jpg");
+  grid-area: c;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+}
+
+.schuur {
+  background-image: url("schuur.JPG");
+  grid-area: d;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+}
+
+.havenhuis {
+  background-image: url("havenhuis.JPG");
+  grid-area: e;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+}
+
+.ikke_s {
+  background-image: url("ikke_s.jpg");
+  grid-area: f;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+}
+
+.carolina_s1 {
+  background-image: url("carolina_s1.jpg");
+  grid-area: g;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+}
+
+.carolina_l {
+  background-image: url("carolina_l.jpg");
+  grid-area: h;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+}
+
+.coke {
+  background-image: url("coke.jpg");
+  grid-area: i;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+}
+
+@supports (grid-area: auto) {
+	/* we weten hier: ondersteuning voor grid-layout */
+
+	@media (min-width: 500px) {
+		/* een voorbeeld van een media query: hier schrijf je de css die wordt uitgevoerd indien het scherm minstens 800px breedte biedt */
+
+    main {
+      grid-template-areas:
+      "a a d d"
+      "a a e e"
+      "c f f g"
+      "c f f g"
+      "h h b b"
+      "i i b b"
+    }
+
+    .ikke {
+      height: auto;
+    }
+
+    .carolina_s3 {
+      height: auto;
+    }
+
+    }
+
+
+    @media (min-width: 900px) {
+      /* een voorbeeld van een media query: hier schrijf je de css die wordt uitgevoerd indien het scherm minstens 800px breedte biedt */
+
+      main {
+        display: block;
+        height: 100%;
+        overflow: auto;
+      }
+
+      .ikke {
+        background-size: contain;
+        position: absolute;
+        top: 23%;
+        left: 50%;
+        margin-left: -25%;
+        height: 65%;
+        width: 50%;
+        z-index: 5;
+      }
+
+      .carolina_s3 {
+        background-size: contain;
+        position: absolute;
+        left: 6rem;
+        top: 10rem;
+        height: 37%;
+        width: 20%;
+        z-index: 1;
+      }
+
+      .carolina_s2 {
+        background-size: contain;
+        position: absolute;
+        right: 9rem;
+        top: 40rem;
+        height: 37%;
+        width: 20%;
+        z-index: 7;
+      }
+
+      .schuur {
+        background-size: contain;
+        position: absolute;
+        left: 6rem;
+        top: 44rem;
+        height: 36%;
+        width: 30%;
+        z-index: 9;
+      }
+
+      .havenhuis {
+        background-size: contain;
+        position: absolute;
+        left: 29rem;
+        top: 54rem;
+        height: 29%;
+        width: 23%;
+        z-index: 6;
+      }
+
+      .ikke_s {
+        background-size: contain;
+        position: absolute;
+        right: 2rem;
+        top: 28rem;
+        height: 36%;
+        width: 21%;
+        z-index: 4;
+      }
+
+      .carolina_s1 {
+        background-size: contain;
+        position: absolute;
+        left: 3rem;
+        top: 30rem;
+        height: 36%;
+        width: 18%;
+        z-index: 8;
+      }
+
+      .carolina_l {
+        background-size: contain;
+        position: absolute;
+        right: 3rem;
+        top: 9rem;
+        height: 50%;
+        width: 37%;
+        z-index: 3;
+      }
+
+      .coke {
+        background-size: contain;
+        position: absolute;
+        right: 17rem;
+        top: 8rem;
+        height: 13%;
+        width: 20%;
+        z-index: 6;
+      }
+
+    }
+  }

@@ -1,0 +1,229 @@
+html {
+  font-family: helvetica;
+}
+
+body.lightmode {
+  background-color: white;
+}
+
+body.darkmode {
+  background-color: #282828;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 2rem;
+  padding: 1rem 1rem .5rem 0rem;
+  text-align: right;
+}
+
+#btn-hamburger span {
+  background: firebrick;
+  width: 3rem;
+  height: 5px;
+  display: block;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+#btn-hamburger.lightmode {
+  cursor: pointer;
+  width: 88px;
+  height: 64px;
+  text-align: center;
+  padding-top: 1.5rem;
+  background-color: #DCDCDC;
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+}
+
+#btn-hamburger.darkmode {
+  cursor: pointer;
+  width: 88px;
+  height: 64px;
+  text-align: center;
+  padding-top: 1.5rem;
+  background-color: #464646;
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+}
+
+header.lightmode {
+  background-color: #DCDCDC;
+  color: black;
+  position: fixed;
+  top: 0rem;
+  right: 0rem;
+  width: calc(100% - 88px);
+}
+
+header.darkmode {
+  background-color: #464646;
+  color: white;
+  position: fixed;
+  top: 0rem;
+  right: 0rem;
+  width: calc(100% - 88px);
+}
+
+#light-dark.lightmode {
+  position: fixed;
+  top: 0rem;
+  left: 88px;
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  width: 88px;
+  height: 88px;
+  border: 0;
+  outline: 0;
+  background-color: #191919;
+  color: white;
+  cursor: pointer;
+}
+
+#light-dark.darkmode {
+  position: fixed;
+  top: 0rem;
+  left: 88px;
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  width: 88px;
+  height: 88px;
+  border: 0;
+  outline: 0;
+  background-color: #F1F1F1;
+  color: black;
+  cursor: pointer;
+}
+
+.nav-sidebar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 58px;
+  height: calc(100vh - 88px);
+  padding: 0 15px;
+  background-color: firebrick;
+  opacity: .8;
+  z-index: 1000;
+}
+
+.nav-sidebar, .nav-sidebar ul {
+    visibility: hidden;
+}
+
+.nav-sidebar ul {
+  padding-top: 15px;
+  overflow: hidden;
+}
+
+.nav-sidebar ul li {
+  line-height: 40px;
+}
+
+.nav-sidebar ul li a {
+  display: block;
+  height: 40px;
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  padding: 2rem;
+  padding-top: 7.5rem;
+  display: block
+}
+
+h2.lightmode {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: .8rem;
+  color: black;
+}
+
+h2.darkmode {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: .8rem;
+  color: white;
+}
+
+h3.lightmode {
+  font-size: 1.2rem;
+  margin-bottom: .4rem;
+  color: black;
+}
+
+h3.darkmode {
+  font-size: 1.2rem;
+  margin-bottom: .4rem;
+  color: white;
+}
+
+p.lightmode {
+  margin-bottom: 1rem;
+  color: black;
+}
+
+p.darkmode {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+@supports (grid-area: auto) {
+	/* we weten hier: ondersteuning voor grid-layout */
+
+	@media (min-width: 500px) {
+		/* een voorbeeld van een media query: hier schrijf je de css die wordt uitgevoerd indien het scherm minstens 800px breedte biedt */
+
+    h2.lightmode {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: .8rem;
+      text-align: center;
+      color: black;
+
+    }
+
+    h2.darkmode {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: .8rem;
+      text-align: center;
+      color: white;
+    }
+
+    h3.lightmode {
+      font-size: 1.2rem;
+      margin-bottom: .4rem;
+      text-align: center;
+      color: black;
+    }
+
+    h3.darkmode {
+      font-size: 1.2rem;
+      margin-bottom: .4rem;
+      text-align: center;
+      color: white;
+    }
+
+    p.lightmode {
+      margin-bottom: 1rem;
+      text-align: center;
+      color: black;
+    }
+
+    p.darkmode {
+      margin-bottom: 1rem;
+      text-align: center;
+      color: white;
+    }
+
+  }
+}
